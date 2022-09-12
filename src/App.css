@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+*{
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.topDiv{
+  display: flex;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cardSection{
+  position: absolute;
+  top:20%;
+  left: 5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.frontCardSection{
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    padding-left: 5em;
+}
+.backCardSection{
+  display: flex;
+  justify-content: center;
+  height: 250px;
+  padding-left: 10em;
+}
+
+.topForm{
+  padding:2em;
+  position: absolute;
+  top:25%;
+  right: 20%;
+}
+
+.field{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 25vw;
+  text-align: left;
+  margin-bottom: 1.5em;
+  line-height: 1em;
+  font-size: 1.2em;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input{
+  height: 3em;
 }

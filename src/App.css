@@ -1,50 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 
-*{
-  font-family: 'Space Grotesk', sans-serif;
+* {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
 }
 
-.topDiv{
+.topDiv {
+  min-height: 100vh;
   display: flex;
-
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  background-image: url("../src/images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: 60vh 100vw;
 }
 
-.cardSection{
-  position: absolute;
-  top:20%;
-  left: 5%;
+.container{
+  display: flex;
+  flex-direction: column;
+  width:50%
 }
 
 .frontCardSection{
-    display: flex;
-    justify-content: center;
-    height: 250px;
-    padding-left: 5em;
+  position:absolute;
+  min-width:35%;
+  top:10%;
+  bottom: 85%;
+  left: 5%
 }
+
 .backCardSection{
-  display: flex;
-  justify-content: center;
-  height: 250px;
-  padding-left: 10em;
+  position:absolute;
+  min-width:35%;
+  top:55%;
+  bottom: 40%;
+  left: 15%
+
 }
 
-.topForm{
-  padding:2em;
-  position: absolute;
-  top:25%;
-  right: 20%;
-}
-
-.field{
+.field {
   display: flex;
   flex-direction: column;
-  width: 25vw;
+  width: 40vw;
   text-align: left;
   margin-bottom: 1.5em;
-  line-height: 1em;
+  line-height: 1.5em;
   font-size: 1.2em;
 }
 
-input{
+.month-year-cvc-top{
+  display: flex;
+  flex-direction: row;
+}
+.month-year-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100px
+}
+
+
+input {
   height: 3em;
+  font-size: 1.2em;
 }

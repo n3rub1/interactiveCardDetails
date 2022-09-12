@@ -16,31 +16,19 @@ function App() {
   };
 
   return (
-    <div className="topDiv">
-      <section className="cardSection">
-        <img
-          className="frontCardSection"
-          src={cardFront}
-          alt="card front image"
-        ></img>
-        <p>{cardNumber}</p>
-        <p>{nameOfUser}</p>
-        <p>{expDateMonth}</p>
-        <p>{expDateYear}</p>
-        <img
-          className="backCardSection"
-          src={cardBack}
-          alt="card back image"
-        ></img>
-        <p>{cvc}</p>
-      </section>
+    <div>
+      <div className="topDiv">
+        <section className="container">
+          <img className="frontCardSection" src={cardFront} alt="card front image"></img>
+          <img className="backCardSection" src={cardBack} alt="card back image"></img>
+        </section>
 
-      <div className="topForm">
-        <form onSubmit={handleSubmit}>
-
+        <div className="topForm">
+          <form onSubmit={handleSubmit}>
             <label className="field">
               Cardholder Name
               <input
+                placeholder="Eg: Jane Appleseed"
                 type="text"
                 value={nameOfUser}
                 onChange={(e) => {
@@ -49,54 +37,60 @@ function App() {
               />
             </label>
 
-          <div>
-            <label className="field">
-              Card Number
-              <input
-                type="text"
-                value={cardNumber}
-                onChange={(e) => {
-                  setCardNumber(e.target.value);
-                }}
-              />
-            </label>
-          </div>
+            <div>
+              <label className="field">
+                Card Number
+                <input
+                  placeholder="Eg: 1234 5678 9100 1234"
+                  type="text"
+                  value={cardNumber}
+                  onChange={(e) => {
+                    setCardNumber(e.target.value);
+                  }}
+                />
+              </label>
+            </div>
 
-          <div>
-            <label className="field">
-              Exp. Date (MM/YY)
-              <input
-                type="text"
-                value={expDateMonth}
-                onChange={(e) => {
-                  setExpDateMonth(e.target.value);
-                }}
-              />
-            </label>
-            <label>
-              <input
-                type="text"
-                value={expDateYear}
-                onChange={(e) => {
-                  setExpDateYear(e.target.value);
-                }}
-              />
-            </label>
+            <div className="month-year-cvc-top">
+              <div className="month-year-top">
+                <label className="field">
+                  Exp. Date (MM/YY)
+                  <input
+                    placeholder="MM"
+                    type="text"
+                    value={expDateMonth}
+                    onChange={(e) => {
+                      setExpDateMonth(e.target.value);
+                    }}
+                  />
+                  <input
+                    placeholder="YY"
+                    type="text"
+                    value={expDateYear}
+                    onChange={(e) => {
+                      setExpDateYear(e.target.value);
+                    }}
+                  />
+                </label>
+              </div>
+              <div className="month-year-top">
+                <label className="field">
+                  CVC
+                  <input
+                    placeholder="123"
+                    type="text"
+                    value={cvc}
+                    onChange={(e) => {
+                      setCvc(e.target.value);
+                    }}
+                  />
+                </label>
+              </div>
+            </div>
 
-            <label className="field">
-              CVC
-              <input
-                type="text"
-                value={cvc}
-                onChange={(e) => {
-                  setCvc(e.target.value);
-                }}
-              />
-            </label>
-          </div>
-
-          <button>Confirm</button>
-        </form>
+            <button>Confirm</button>
+          </form>
+        </div>
       </div>
     </div>
   );
